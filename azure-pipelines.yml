@@ -3,6 +3,21 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+
+steps:
+- task: DotNetCoreInstaller@0
+  inputs:
+    version: '2.1.600'
+  displayName: 'Install DotNetCore'
   
 - script:
    dotnet build
