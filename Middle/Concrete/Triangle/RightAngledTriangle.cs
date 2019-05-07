@@ -3,7 +3,7 @@ using GeeksForGeeks.Middle.Interface;
 
 namespace GeeksForGeeks.Middle.Concrete.Triangle
 {
-    public class LeftAngledTriangle : IShape
+    public class RightAngledTriangle : IShape
     {
         public string GetValue()
         {

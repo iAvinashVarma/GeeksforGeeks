@@ -6,6 +6,8 @@ namespace GeeksForGeeks.Middle.Observer
 {
     public class Shaper
     {
+        private const string divider = "------------------------------------"; 
+
         private static volatile Shaper instance = null;
 
         private static readonly object mutex = new object();
@@ -47,7 +49,9 @@ namespace GeeksForGeeks.Middle.Observer
         {
             foreach(var shaper in _shapers)
             {
+                Console.WriteLine(divider);
                 Console.WriteLine(shaper.GetValue());
+                Console.WriteLine(divider);
             }
         }
     }

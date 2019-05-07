@@ -13,8 +13,8 @@ namespace GeeksForGeeks.Middle.Factory
             IShape shape = null;
             switch(shapeType)
             {
-                case ShapeType.LeftAngledTriangle:
-                    shape = new LeftAngledTriangle();
+                case ShapeType.RightAngledTriangle:
+                    shape = new RightAngledTriangle();
                     break;
                 case ShapeType.EquilateralTriangle:
                     shape = new EquilateralTriangle();
