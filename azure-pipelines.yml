@@ -3,12 +3,6 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
   
 - script:
    dotnet build
