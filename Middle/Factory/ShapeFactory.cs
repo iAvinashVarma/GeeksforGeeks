@@ -1,6 +1,8 @@
 using GeeksForGeeks.Middle.Enum;
 using GeeksForGeeks.Middle.Interface;
-using GeeksForGeeks.Middle.Concrete;
+using GeeksForGeeks.Middle.Concrete.Triangle;
+using System.Collections.Generic;
+using GeeksForGeeks.Middle.Observer;
 
 namespace GeeksForGeeks.Middle.Factory
 {
@@ -13,6 +15,9 @@ namespace GeeksForGeeks.Middle.Factory
             {
                 case ShapeType.LeftAngledTriangle:
                     shape = new LeftAngledTriangle();
+                    break;
+                case ShapeType.EquilateralTriangle:
+                    shape = new EquilateralTriangle();
                     break;
             }
             return shape;

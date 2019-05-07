@@ -1,11 +1,11 @@
 using System.Text;
 using GeeksForGeeks.Middle.Interface;
 
-namespace GeeksForGeeks.Middle.Concrete
+namespace GeeksForGeeks.Middle.Concrete.Triangle
 {
     public class LeftAngledTriangle : IShape
     {
-        public string GetShapeVaue()
+        public string GetValue()
         {
             var shape = new StringBuilder();
             for(int i = 1; i <= 5; i++)

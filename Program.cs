@@ -1,6 +1,6 @@
 ﻿using System;
-using GeeksForGeeks.Middle.Factory;
-using GeeksForGeeks.Middle.Enum;
+using GeeksForGeeks.Middle.Observer;
+using GeeksForGeeks.Middle.Concrete.Triangle;
 
 namespace GeeksForGeeks
 {
@@ -8,9 +8,9 @@ namespace GeeksForGeeks
     {
         static void Main(string[] args)
         {
-            var shapeFactory = new ShapeFactory();
-            var leftAngledTriangleValue = shapeFactory.GetShape(ShapeType.LeftAngledTriangle).GetShapeVaue();
-            Console.WriteLine(leftAngledTriangleValue);
+            Shaper.Instance.Register(new EquilateralTriangle());
+            Shaper.Instance.Register(new LeftAngledTriangle());
+            Shaper.Instance.Notify();
         }
     }
 }
