@@ -12,6 +12,7 @@ namespace GeeksForGeeks
             Shaper.Instance.Register(new EquilateralTriangle());
             Shaper.Instance.Register(new RightAngledTriangle());
             Shaper.Instance.Register(new Square());
+            Shaper.Instance.Register(new Rectangle());
             Shaper.Instance.Notify();
         }
     }
