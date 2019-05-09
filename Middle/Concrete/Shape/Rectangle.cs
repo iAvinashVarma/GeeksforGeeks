@@ -1,7 +1,7 @@
 using System.Text;
 using GeeksForGeeks.Middle.Interface;
 
-namespace GeeksForGeeks.Middle.Concrete
+namespace GeeksForGeeks.Middle.Concrete.Shape
 {
     public class Rectangle : IShape
     {

@@ -1,7 +1,7 @@
 using GeeksForGeeks.Middle.Enum;
 using GeeksForGeeks.Middle.Interface;
-using GeeksForGeeks.Middle.Concrete;
-using GeeksForGeeks.Middle.Concrete.Triangle;
+using GeeksForGeeks.Middle.Concrete.Shape;
+using GeeksForGeeks.Middle.Concrete.Shape.Triangle;
 using System.Collections.Generic;
 using GeeksForGeeks.Middle.Observer;
 

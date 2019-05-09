@@ -1,7 +1,7 @@
 using System.Text;
 using GeeksForGeeks.Middle.Interface;
 
-namespace GeeksForGeeks.Middle.Concrete.Triangle
+namespace GeeksForGeeks.Middle.Concrete.Shape.Triangle
 {
     public class RightAngledTriangle : IShape
     {

@@ -50,6 +50,7 @@ namespace GeeksForGeeks.Middle.Observer
             foreach(var shaper in _shapers)
             {
                 Console.WriteLine(divider);
+                Console.WriteLine("{0}:{1}", shaper.GetType().Name, Environment.NewLine);
                 Console.WriteLine(shaper.GetValue());
                 Console.WriteLine(divider);
             }
