@@ -51,6 +51,7 @@ namespace GeeksForGeeks.Middle.Observer
             foreach(var sorter in _sorters)
             {
                 Console.WriteLine(divider);
+                Console.WriteLine("{0} - {1}", "Given Order", string.Join(",", arr.Select(o => o.ToString()).ToArray()));
                 var order = sorter.GetOrder(arr);
                 Console.WriteLine("{0} - {1}", sorter.GetType().Name, string.Join(",", order.Select(o => o.ToString()).ToArray()));
                 Console.WriteLine(divider);

@@ -18,6 +18,7 @@ namespace GeeksForGeeks
 
             int[] arr = { 64, 25, 12, 22, 11}; 
             Sorter<int>.Instance.Register(new SelectionSort());
+            Sorter<int>.Instance.Register(new BubbleSort());
             Sorter<int>.Instance.Notify(arr);
         }
     }
