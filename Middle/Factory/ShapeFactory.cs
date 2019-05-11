@@ -9,6 +9,41 @@ namespace GeeksForGeeks.Middle.Factory
 {
     public class ShapeFactory 
     {
+        private static volatile ShapeFactory instance;
+
+        private static readonly object sync = new object();
+
+        private ShapeFactory()
+        {
+
+        }
+
+        public static ShapeFactory Instance
+        {
+            get
+            {
+                if(instance == null)
+                {
+                    lock(sync)
+                    {
+                        if(instance == null)
+                        {
+                            instance = new ShapeFactory();
+                        }
+                    }
+                }
+                return instance;
+            }
+        }
+
+        public void RegisterShapes()
+        {
+            Shaper.Instance.Register(GetShape(ShapeType.EquilateralTriangle));
+            Shaper.Instance.Register(GetShape(ShapeType.RightAngledTriangle));
+            Shaper.Instance.Register(GetShape(ShapeType.Square));
+            Shaper.Instance.Register(GetShape(ShapeType.Rectangle));
+        }
+
         public IShape GetShape(ShapeType shapeType)
         {
             IShape shape = null;

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using GeeksForGeeks.Middle.Interface;
 using System;
+using System.Threading.Tasks;
 
 namespace GeeksForGeeks.Middle.Observer
 {
@@ -47,11 +48,11 @@ namespace GeeksForGeeks.Middle.Observer
 
         public void Notify()
         {
-            foreach(var shaper in _shapers)
+            foreach(var s in _shapers)
             {
                 Console.WriteLine(divider);
-                Console.WriteLine("{0}:{1}", shaper.GetType().Name, Environment.NewLine);
-                Console.WriteLine(shaper.GetValue());
+                Console.WriteLine("{0}:{1}", s.GetType().Name, Environment.NewLine);
+                Console.WriteLine(s.GetValue());
                 Console.WriteLine(divider);
             }
         }

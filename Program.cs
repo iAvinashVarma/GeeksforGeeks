@@ -1,5 +1,6 @@
 ﻿using System;
 using GeeksForGeeks.Middle.Observer;
+using GeeksForGeeks.Middle.Factory;
 using GeeksForGeeks.Middle.Concrete.Shape;
 using GeeksForGeeks.Middle.Concrete.Shape.Triangle;
 using GeeksForGeeks.Middle.Concrete.Sort;
@@ -10,16 +11,11 @@ namespace GeeksForGeeks
     {
         static void Main(string[] args)
         {
-            Shaper.Instance.Register(new EquilateralTriangle());
-            Shaper.Instance.Register(new RightAngledTriangle());
-            Shaper.Instance.Register(new Square());
-            Shaper.Instance.Register(new Rectangle());
+            ShapeFactory.Instance.RegisterShapes();
             Shaper.Instance.Notify();
 
-            int[] arr = { 64, 25, 12, 22, 11}; 
-            Sorter<int>.Instance.Register(new SelectionSort());
-            Sorter<int>.Instance.Register(new BubbleSort());
-            Sorter<int>.Instance.Notify(arr);
+            SortFactory.Instance.RegisterSorts();
+            Sorter.Instance.Notify();
         }
     }
 }
