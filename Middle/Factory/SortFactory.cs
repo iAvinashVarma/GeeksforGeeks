@@ -40,6 +40,7 @@ namespace GeeksForGeeks.Middle.Factory
             Sorter.Instance.Register(new SelectionSort());
             Sorter.Instance.Register(new BubbleSort());
             Sorter.Instance.Register(new QuickSort());
+            Sorter.Instance.Register(new HeapSort());
         }
     }
 }
